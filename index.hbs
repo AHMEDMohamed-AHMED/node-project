@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>   
+</head>
+<body>
+     {{>header}}
+{{#each data}}
+    <div class="card" style="margin: auto;" >
+  <img src="{{this.urlToImage}}" class="card-img-top" width="80%" height="40% " style="margin-left:10%;" >
+  <div class="card-body" style="text-align:center; font-size:25px">
+    <h5 class="card-title">{{this.title}}</h5>
+    <p class="card-text">{{this.description}}</p>
+    <a href="#" class="btn btn-primary">See in details</a>
+  </div>
+</div>
+{{/each}}
+ {{>footer}}
+</body>
+</html>
